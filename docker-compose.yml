@@ -1,0 +1,22 @@
+app1:
+  image: miapache
+  container_name: apache1
+
+  volumes:
+    - ./index.html:/var/www/html/index.php:ro  
+app2:
+  image: miapache
+  container_name: apache2
+
+  volumes:
+    - ./index2.html:/var/www/html/index.php:ro  
+nginx:
+  image: nginx:alpine
+  container_name: rproxyb
+  volumes:
+    - ./nginx3.conf:/etc/nginx/conf.d/default.conf:ro
+  links:
+     - app1 
+     - app2  
+  ports:
+    - "99:80"

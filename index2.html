@@ -1,0 +1,20 @@
+
+  <head>
+    <title>Test proxy IP client</title>
+  </head>
+  <body bgcolor=white>
+
+    <table border="0" cellpadding="10">
+      <tr>
+        <td>
+          <h1>Whale Cum App 2</h1>
+		  
+		  <h3>Proxy1 IP:</h3><?php echo $_SERVER['HTTP_X_REAL_IP']      ?>
+		  <h3>Client IP:</h3><?php echo $_SERVER['HTTP_X_FORWARDED_FOR'] ?>
+        </td>
+      </tr>
+    </table>
+
+
+  </body>
+</html>

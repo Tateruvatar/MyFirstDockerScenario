@@ -1,0 +1,6 @@
+FROM eboraas/apache-php
+RM /var/www/html/index.html
+RUN make /app
+
+
+
